@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Training</title>
+</head>
+<body>
+    <h1>AI Model Interface</h1>
+
+    <h2>Test Model</h2>
+    <form id="test-form">
+        <label for="expression">Enter the mathematical operation: </label>
+        <input type="text" id="expression" name="expression" required>
+        <button type="submit">Test</button>
+    </form>
+    <p id="test-result"></p>
+
+    <h2>Continue training</h2>
+    <form id="continue-form">
+        <label for="minutes">Training time (minutes):</label>
+        <input type="number" id="minutes" name="minutes" required>
+        <button type="submit">Continue</button>
+    </form>
+    <p id="continue-result"></p>
+
+    <script>
+        document.getElementById('test-form').onsubmit = async function(e) {
+            e.preventDefault();
+            const expression = document.getElementById('expression').value;
+            const response = await fetch('/test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `expression=${expression}`
+            });
+            const data = await response.json();
+            document.getElementById('test-result').innerText = data.result;
+        };
+
+        document.getElementById('continue-form').onsubmit = async function(e) {
+            e.preventDefault();
+            const minutes = document.getElementById('minutes').value;
+            const response = await fetch('/continue', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `minutes=${minutes}`
+            });
+            const data = await response.json();
+            document.getElementById('continue-result').innerText = data.result;
+        };
+    </script>
+</body>
+</html>
