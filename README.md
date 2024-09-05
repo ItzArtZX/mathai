@@ -13,3 +13,8 @@ Then go to the project location and run `mathai.py` or go to the project files l
 
 
 Then wait a few seconds and enter the website `http://127.0.0.1:5000` or `http://localhost:5000`
+
+
+Replit of this project: [Click here to visit](https://replit.com/@MikotSuperUser/Math-Ai?v=1#main.py)
+
+Updated Version: [Click here to visit](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
