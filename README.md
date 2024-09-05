@@ -1,4 +1,5 @@
-# mathai
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=MathAi.py&fontSize=90&animation=fadeIn)
+
 AI that learns math
 To install, you need to make sure you have Python installed, as well as the tensorflow and flask modules.
 
