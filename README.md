@@ -14,6 +14,7 @@ Then go to the project location and run `mathai.py` or go to the project files l
 
 Then wait a few seconds and enter the website `http://127.0.0.1:5000` or `http://localhost:5000`
 
+This project is made just for fun. For the love of god, just use a **Calculator**.
 
 Replit of this project: [Click here to visit](https://replit.com/@MikotSuperUser/Math-Ai?v=1#main.py)
 
